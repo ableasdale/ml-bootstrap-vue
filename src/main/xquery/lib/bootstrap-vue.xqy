@@ -132,6 +132,28 @@ declare function bootstrap-vue:table() as element(b-table) {
     </b-table>
 };
 
+(: Other things that aren't yet documented :)
+declare function bootstrap-vue:badge() as element(b-badge) {
+    <b-badge>test</b-badge>
+};
+
+
+(: these are from vuestrap - not working today :)
+declare function bootstrap-vue:aside() {
+    <aside v-bind:show.sync="showRight" placement="right" header="Title" width="350">
+  ...
+</aside>
+};
+
+declare function bootstrap-vue:alert2(){
+
+    <alert v-model="showRight" placement="top-right" duration="3000" type="success" width="400px" dismissable="true">
+  <span class="icon-ok-circled alert-icon-float-left"></span>
+  <strong>Well Done!</strong>
+  <p>You successfully read this important alert message.</p>
+</alert>
+};
+
 
 
 

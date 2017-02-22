@@ -76,4 +76,11 @@ view:bootstrap(
         {bootstrap:row(bootstrap:h4("Table", "bootstrap-vue:table()"))}
         {bootstrap:row(bootstrap-vue:table())}
 
+        <hr/>
+        {bootstrap:row(bootstrap:h4("Badge", "bootstrap-vue:badge()"))}
+        {bootstrap:row(bootstrap-vue:badge())}
+   
+        {bootstrap-vue:aside()}
+        {bootstrap-vue:alert2()}
+
     </div>)
