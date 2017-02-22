@@ -12,8 +12,8 @@ declare function view:bootstrap($title as xs:string, $content as element(div)){
     view:bootstrap($title, $content, ())
 };
 
-declare function view:alert(){
-    text{'<b-alert :show="true" state="success" dismissible>This is an alert</b-alert>'}
+declare function view:alert() as json:unquotedString {
+    json:unquotedString('<b-alert :show="true" state="success" dismissible>This is an alert</b-alert>')
 };
 
 declare function view:bootstrap($title as xs:string, $content as element(div), $additional-resource as item()*) {
@@ -40,6 +40,15 @@ declare function view:bootstrap($title as xs:string, $content as element(div), $
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">{" "}</script>
             <script src="https://unpkg.com/vue/dist/vue.js">{" "}</script>
             <script src="https://unpkg.com/bootstrap-vue/dist/bootstrap-vue.js">{" "}</script>
+            <script><![CDATA[
+      new Vue({ 
+        el: "#app",
+        data: {
+          message: "Hello Vue.js!"
+        }
+      });
+      ]]>
+    </script>
             {$additional-resource}
         </body>
     </html>

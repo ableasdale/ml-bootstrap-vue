@@ -2,10 +2,8 @@ xquery version "1.0-ml";
 
 module namespace bootstrap-vue = "http://www.xmlmachines.com/ml-bootstrap-vue/bootstrap-vue.xqy";
 
-import module namespace config = "http://www.xmlmachines.com/ml-bootstrap-vue/config.xqy" at "/lib/config.xqy";
-
 declare namespace v-on = "http://fake.org/fake";
-declare namespace v-bind = "http://fake.org/fake";
+declare namespace v-bind = "http://fake.org/fake2";
 
 declare function bootstrap-vue:button() as element(b-button) {
     <b-button v-bind:size="size" v-bind:variant="variant" v-on:click="clicked">Click Me!</b-button>
