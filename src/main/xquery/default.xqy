@@ -69,5 +69,11 @@ view:bootstrap(
         {bootstrap:row(bootstrap-vue:pagination())}
       
         <hr/>
+        {bootstrap:row(bootstrap:h4("Popover", "bootstrap-vue:popover()"))}
+        {bootstrap:row(bootstrap-vue:popover())}
+
+        <hr/>
+        {bootstrap:row(bootstrap:h4("Table", "bootstrap-vue:table()"))}
+        {bootstrap:row(bootstrap-vue:table())}
 
     </div>)

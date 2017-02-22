@@ -110,6 +110,28 @@ declare function bootstrap-vue:pagination() as element(b-pagination) {
     </b-pagination>
 };
 
+declare function bootstrap-vue:popover() as element(b-popover) {
+    <b-popover title="My Popover Title">
+      <b-btn v-on:click="clickEventConfirmed">Submit</b-btn>
+      <div class="text-xs-center" slot="content">Isnt this lovely?</div>
+    </b-popover>
+};
+
+declare function bootstrap-vue:table() as element(b-table) {
+    <b-table
+        v-bind:items="items"
+        v-bind:fields="fields"
+        pagination="true"
+        v-bind:perPage="3">
+        <template slot="name" scope="item">
+            text{"{ {item.value.first}} { {item.value.last}}"}
+        </template>
+        <template slot="actions" scope="item">
+            <b-btn size="sm" v-on:click="details(item.item)">Details</b-btn>
+        </template>
+    </b-table>
+};
+
 
 
 
