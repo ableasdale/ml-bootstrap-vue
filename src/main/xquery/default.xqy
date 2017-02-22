@@ -64,4 +64,10 @@ view:bootstrap(
         {bootstrap:row(bootstrap:h4("Navbar", "bootstrap-vue:navbar()"))}
         {bootstrap:row(bootstrap-vue:navbar())}
 
+        <hr/>
+        {bootstrap:row(bootstrap:h4("Pagination", "bootstrap-vue:pagination()"))}
+        {bootstrap:row(bootstrap-vue:pagination())}
+      
+        <hr/>
+
     </div>)

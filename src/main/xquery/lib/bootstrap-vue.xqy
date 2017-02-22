@@ -101,6 +101,15 @@ declare function bootstrap-vue:navbar() as element(b-navbar) {
     </b-navbar>
 };
 
+declare function bootstrap-vue:pagination() as element(b-pagination) {
+    <b-pagination size="md"
+        variant="danger"
+        v-bind:total-rows="100"
+        v-model="currentPage"
+        v-bind:per-page="10">
+    </b-pagination>
+};
+
 
 
 
