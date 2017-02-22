@@ -10,7 +10,7 @@ declare option xdmp:output "method = html";
 view:bootstrap(
     <div class="container" id="app">
         
-        {bootstrap:row(bootstrap:h2("Items", $config:APPLICATION-TITLE))}
+        {bootstrap:row(bootstrap:h2("UI Components", $config:APPLICATION-TITLE))}
         
         {bootstrap:row(bootstrap:h4("Buttons", "bootstrap-vue:button()"))}
         {bootstrap:row(bootstrap-vue:button())}
@@ -30,6 +30,36 @@ view:bootstrap(
         {bootstrap:row(bootstrap:h4("Dropdowns", "bootstrap-vue:dropdown()"))}
         {bootstrap:row(bootstrap-vue:dropdown())}
 
-        
+        <hr/>
 
+        {bootstrap:row(bootstrap:h4("Form Input", "bootstrap-vue:form-input()"))}
+        {bootstrap:row(element p {"todo - not rendering"})}
+
+        <hr />
+
+        {bootstrap:row(bootstrap:h4("Form Fieldset", "bootstrap-vue:form-fieldset()"))}
+        {bootstrap:row(element p {"todo - not rendering"})}
+        
+        <hr />
+
+        {bootstrap:row(bootstrap:h4("Form Radio buttons", "bootstrap-vue:forms-radio()"))}
+        {bootstrap:row(bootstrap-vue:form-radio())}
+        
+        <hr />
+
+        {bootstrap:row(bootstrap:h4("Form Checkbox", "bootstrap-vue:form-checkbox()"))}
+        {bootstrap:row(bootstrap-vue:form-checkbox())}
+        
+        <hr />
+
+        {bootstrap:row(bootstrap:h4("Form Select", "bootstrap-vue:form-select()"))}
+        {bootstrap:row(bootstrap-vue:form-select())}
+        
+        <hr />
+
+        {bootstrap:row(bootstrap:h4("Nav", "bootstrap-vue:nav()"))}
+        {bootstrap:row(bootstrap-vue:nav())}
+       
+       <hr />
+       
     </div>)
