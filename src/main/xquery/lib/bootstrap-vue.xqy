@@ -83,6 +83,23 @@ declare function bootstrap-vue:nav() as element(b-nav) {
     </b-nav>
 };
 
+declare function bootstrap-vue:navbar() as element(b-navbar) {
+     <b-navbar toggleable="true">
+        <b-nav-toggle target="nav_collapse"/>
+
+        <a class="navbar-brand" to="/">
+        <span>Bootstrap4</span>
+        </a>
+
+        <b-collapse isNav="isNav" id="nav_collapse">
+            <b-nav isNavBar="isNavBar">
+                <b-nav-item>Support</b-nav-item>
+                <b-nav-item>Docs</b-nav-item>
+                <b-nav-item>Contact Us</b-nav-item>
+            </b-nav>
+        </b-collapse>
+    </b-navbar>
+};
 
 
 

@@ -60,6 +60,8 @@ view:bootstrap(
         {bootstrap:row(bootstrap:h4("Nav", "bootstrap-vue:nav()"))}
         {bootstrap:row(bootstrap-vue:nav())}
        
-       <hr />
-       
+        <hr />
+        {bootstrap:row(bootstrap:h4("Navbar", "bootstrap-vue:navbar()"))}
+        {bootstrap:row(bootstrap-vue:navbar())}
+
     </div>)
