@@ -12,6 +12,10 @@ declare function view:bootstrap($title as xs:string, $content as element(div)){
     view:bootstrap($title, $content, ())
 };
 
+declare function view:alert(){
+    text{'<b-alert :show="true" state="success" dismissible>This is an alert</b-alert>'}
+};
+
 declare function view:bootstrap($title as xs:string, $content as element(div), $additional-resource as item()*) {
     xdmp:set-response-content-type("text/html; charset=utf-8"),
     '<!DOCTYPE html>',
@@ -28,12 +32,14 @@ declare function view:bootstrap($title as xs:string, $content as element(div), $
         </head>
         <body>
             {$content}
-            <!-- jQuery first, then Tether, then Bootstrap JS. -->
+            <!-- jQuery first, then Tether, then Bootstrap JS, then vue.js -->
             <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">{" "}</script>
             <!-- script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous">{" "}</script -->
             <!-- script src="/assets/js/app.js">{" "}</script -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">{" "}</script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">{" "}</script>
+            <script src="https://unpkg.com/vue/dist/vue.js">{" "}</script>
+            <script src="https://unpkg.com/bootstrap-vue/dist/bootstrap-vue.js">{" "}</script>
             {$additional-resource}
         </body>
     </html>
