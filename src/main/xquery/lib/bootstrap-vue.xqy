@@ -138,7 +138,11 @@ declare function bootstrap-vue:badge() as element(b-badge) {
 };
 
 
-(: these are from vuestrap - not working today :)
+
+
+
+
+(: below examples are from vuestrap - not working today; might be because they're designed to work with bootstrap 3 and I'm using 4 for this project... :)
 declare function bootstrap-vue:aside() {
     <aside v-bind:show.sync="showRight" placement="right" header="Title" width="350">
   ...
@@ -146,12 +150,14 @@ declare function bootstrap-vue:aside() {
 };
 
 declare function bootstrap-vue:alert2(){
-
-    <alert v-model="showRight" placement="top-right" duration="3000" type="success" width="400px" dismissable="true">
-  <span class="icon-ok-circled alert-icon-float-left"></span>
-  <strong>Well Done!</strong>
-  <p>You successfully read this important alert message.</p>
-</alert>
+<div>
+<button class="btn btn-success btn-lg" v-on:click="showRight = !showRight">Click to toggle alert</button>
+      <alert v-model="showRight" placement="top-right" v-bind:duration="3000" type="success" width="400px" dismissable="true">
+        <span class="icon-ok-circled alert-icon-float-left">{" "}</span>
+        <strong>Well Done!</strong>
+        <p>You successfully read this important alert message.</p>
+      </alert>
+</div>
 };
 
 
