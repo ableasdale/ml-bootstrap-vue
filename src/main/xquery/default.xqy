@@ -81,6 +81,7 @@ view:bootstrap(
         <hr/>
         {bootstrap:row(bootstrap:h4("Popover", "bootstrap-vue:popover()"))}
         {bootstrap:row(bootstrap-vue:popover())}
+        {(bootstrap-vue:popover-btn(), bootstrap-vue:popover3())}
 
         <hr/>
         {bootstrap:row(bootstrap:h4("Table", "bootstrap-vue:table()"))}
@@ -89,6 +90,7 @@ view:bootstrap(
         <hr/>
         {bootstrap:row(bootstrap:h4("Badge", "bootstrap-vue:badge()"))}
         {bootstrap:row(bootstrap-vue:badge())}
+        {bootstrap:row(bootstrap-vue:badge("success","this is a messsage"))}
    
         <hr/>
         {bootstrap:row(bootstrap:h4("Card", "bootstrap-vue:card()"))}

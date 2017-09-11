@@ -139,15 +139,26 @@ declare function bootstrap-vue:popover() as element(b-popover) {
     </b-popover>
 };
 
+declare function bootstrap-vue:popover-btn() {
+    <b-btn id="exPopover3" variant="primary">Using slots</b-btn>
+};
+
+declare function bootstrap-vue:popover3(){  
+    <b-popover target="exPopover3" triggers="hover focus">
+        <template slot="title">Content via Slots</template>
+        Embedding content <span class="text-danger">using slots</span>
+        affords you <em>greater <strong>control.</strong></em> and
+        basic HTML support.
+    </b-popover>
+};
+
 declare function bootstrap-vue:table() as element(b-table) {
     <b-table
         v-bind:items="items"
         v-bind:fields="fields"
         pagination="true"
         v-bind:perPage="3">
-        <template slot="name" scope="item">
-            text{"{ {item.value.first}} { {item.value.last}}"}
-        </template>
+        <template slot="name" scope="item">{text{"{{item.value.first}} {{item.value.last}}"}}</template>
         <template slot="actions" scope="item">
             <b-btn size="sm" v-on:click="details(item.item)">Details</b-btn>
         </template>
@@ -157,6 +168,10 @@ declare function bootstrap-vue:table() as element(b-table) {
 (: Other things that aren't yet documented :)
 declare function bootstrap-vue:badge() as element(b-badge) {
     <b-badge>test</b-badge>
+};
+
+declare function bootstrap-vue:badge($variant as xs:string, $message as xs:string) as element(b-badge) {
+    <b-badge pill="pill" variant="{$variant}">{$message}</b-badge>
 };
 
 declare function bootstrap-vue:card() as element(b-card) {
