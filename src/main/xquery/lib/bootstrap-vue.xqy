@@ -137,6 +137,10 @@ declare function bootstrap-vue:badge() as element(b-badge) {
     <b-badge>test</b-badge>
 };
 
+declare function bootstrap-vue:card() as element(b-card) {
+    <b-card>test</b-card>
+};
+
 
 
 

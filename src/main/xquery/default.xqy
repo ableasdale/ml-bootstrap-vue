@@ -80,6 +80,12 @@ view:bootstrap(
         {bootstrap:row(bootstrap:h4("Badge", "bootstrap-vue:badge()"))}
         {bootstrap:row(bootstrap-vue:badge())}
    
+        <hr/>
+        {bootstrap:row(bootstrap:h4("Card", "bootstrap-vue:card()"))}
+        {bootstrap:row(bootstrap-vue:card())}
+
+
+<hr/><hr/><hr/>
         {bootstrap-vue:aside()}
         {bootstrap-vue:alert2()}
 
