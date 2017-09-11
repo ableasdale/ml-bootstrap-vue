@@ -22,6 +22,16 @@ view:bootstrap(
 
         <hr/>
 
+        {bootstrap:row(bootstrap:h4("Alerts", 'bootstrap-vue:alert("success")'))}
+        {bootstrap:row(bootstrap-vue:alert("success"))}
+
+        <hr/>
+        
+        {bootstrap:row(bootstrap:h4("Alerts", 'bootstrap-vue:alert-complex()'))}
+        {bootstrap:row((bootstrap-vue:countdown-btn(), bootstrap-vue:alert-complex() ))}
+
+        <hr/>
+
         {bootstrap:row(bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"))}
         {bootstrap:row(bootstrap-vue:button-group())}
 

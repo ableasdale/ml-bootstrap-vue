@@ -9,6 +9,28 @@ declare function bootstrap-vue:alert() as element(b-alert) {
     <b-alert v-bind:show="true" state="success" dismissible="dismissable">This is an alert</b-alert>
 };
 
+declare function bootstrap-vue:alert($variant as xs:string) as element(b-alert) {
+    <b-alert v-bind:show="true" state="success" variant="{$variant}" dismissible="dismissable">This is an alert</b-alert>
+};
+
+declare function bootstrap-vue:alert-complex() as element(b-alert) {
+    <b-alert v-bind:show="dismissCountDown"
+             dismissible="dismissable"
+             variant="warning"
+             v-on:dismissed="dismissCountdown=0"
+             v-on:dismiss-count-down="countDownChanged">
+      <p>{text{'This alert will dismiss after {{dismissCountDown}} seconds...'}}</p>
+      <b-progress variant="warning"
+                  v-bind:max="dismissSecs"
+                  v-bind:value="dismissCountDown"
+                  height="4px">{" "}</b-progress>
+    </b-alert>
+};
+
+declare function bootstrap-vue:countdown-btn() as element(b-btn) {
+    <b-btn v-on:click="showAlert" variant="info" class="m-1">Show alert with count-down timer</b-btn>
+};
+
 (: TODO - this is rejected right now...
 declare function bootstrap-vue:breadcrumb() as element(b-breadcrumb) {
     <b-breadcrumb v-bind:items="[ {text: 'Manage', link: '#', active: true}, {text: 'Library', active: false} ]" />
