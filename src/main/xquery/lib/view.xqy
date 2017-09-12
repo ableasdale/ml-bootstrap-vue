@@ -51,26 +51,24 @@ declare function view:bootstrap($title as xs:string, $content as element(div), $
 
             <!-- script src="https://raw.githubusercontent.com/wffranco/vue-strap/master/dist/vue-strap.min.js">{" "}</script -->
             <script><![CDATA[
-      new Vue({ 
-        el: '#app',
-        data: {
-          dismissSecs: 10,
-          dismissCountDown: 0,
-          showDismissibleAlert: false,
-          message: 'Hello Vue.js!'
-        },
-        methods: {
-          countDownChanged(dismissCountDown) {
-            this.dismissCountDown = dismissCountDown;
-          },
-          showAlert() {
-            this.dismissCountDown = this.dismissSecs;
-          }
-        }
-      });     
-      ]]>
-    </script>
-
+                new Vue({ 
+                    el: '#app',
+                    data: {
+                    dismissSecs: 10,
+                    dismissCountDown: 0,
+                    showDismissibleAlert: false,
+                    message: 'Hello Vue.js!'
+                    },
+                    methods: {
+                    countDownChanged(dismissCountDown) {
+                        this.dismissCountDown = dismissCountDown;
+                    },
+                    showAlert() {
+                        this.dismissCountDown = this.dismissSecs;
+                    }
+                    }
+                });     
+            ]]></script>
             {$additional-resource}
         </body>
     </html>
