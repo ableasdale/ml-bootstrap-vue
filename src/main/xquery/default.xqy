@@ -88,8 +88,8 @@ view:bootstrap-vue(
         {(bootstrap-vue:popover-btn(), bootstrap-vue:popover3())}
 
         <hr/>
-        {bootstrap:row(bootstrap:h4("Table", "bootstrap-vue:table()"))}
-        {bootstrap:row(bootstrap-vue:table())}
+        {bootstrap:h4("Table", "bootstrap-vue:table()"),
+        bootstrap-vue:table()}
 
         <hr/>
         {bootstrap:row(bootstrap:h4("Badge", "bootstrap-vue:badge()"))}

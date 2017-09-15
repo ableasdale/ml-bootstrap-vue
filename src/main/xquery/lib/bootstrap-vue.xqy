@@ -175,7 +175,7 @@ declare function bootstrap-vue:table() as element(b-table) {
         v-bind:items="items"
         v-bind:fields="fields"
         pagination="true"
-        v-bind:per-page="3">
+        v-bind:per-page="5">
         <template slot="name" scope="item">{text{"{{item.value.first}} {{item.value.last}}"}}</template>
         <template slot="actions" scope="item">
             <b-btn size="sm" v-on:click="details(item.item)">Details</b-btn>

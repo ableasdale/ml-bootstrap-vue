@@ -2,9 +2,8 @@ xquery version "1.0-ml";
 
 module namespace bootstrap = "http://www.xmlmachines.com/ml-bootstrap-vue/bootstrap.xqy";
 
-declare function bootstrap:row($content) as element(b-row) {
-    (:element div {attribute class {"row"}, $content} :)
-    <b-row>{$content}</b-row>
+declare function bootstrap:row($content) as element(div) {
+    element div {attribute class {"row"}, $content}
 };
 
 declare function bootstrap:h2($content as xs:string, $sub as xs:string) {
