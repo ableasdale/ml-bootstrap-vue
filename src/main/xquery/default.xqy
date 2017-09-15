@@ -7,43 +7,44 @@ import module namespace bootstrap = "http://www.xmlmachines.com/ml-bootstrap-vue
 
 declare option xdmp:output "method = html";
 
-view:bootstrap(
-    <div class="container" id="app">
+view:bootstrap-vue(
+    <b-container id="app">
         
-        {bootstrap:row(bootstrap:h2("UI Components", $config:APPLICATION-TITLE))}
+        {bootstrap:h2("UI Components", $config:APPLICATION-TITLE),
+        bootstrap:h4("Buttons", "bootstrap-vue:button()"),
+        bootstrap-vue:button()}
         
-        {bootstrap:row(bootstrap:h4("Buttons", "bootstrap-vue:button()"))}
-        {bootstrap:row(bootstrap-vue:button())}
-        
         <hr/>
 
-        {bootstrap:row(bootstrap:h4("Alerts", "bootstrap-vue:alert()"))}
-        {bootstrap:row(bootstrap-vue:alert())}
+        {bootstrap:h4("Alerts", "bootstrap-vue:alert()"),
+        bootstrap-vue:alert()}
 
         <hr/>
 
-        {bootstrap:row(bootstrap:h4("Alerts", 'bootstrap-vue:alert("success")'))}
-        {bootstrap:row(bootstrap-vue:alert("success"))}
+        {bootstrap:h4("Alerts", 'bootstrap-vue:alert("success")'),
+        bootstrap-vue:alert("success")}
 
         <hr/>
         
-        {bootstrap:row(bootstrap:h4("Alerts", 'bootstrap-vue:alert-complex()'))}
-        {bootstrap:row((bootstrap-vue:countdown-btn(), bootstrap-vue:alert-complex() ))}
+        {bootstrap:h4("Alerts", 'bootstrap-vue:alert-complex()'),
+        bootstrap-vue:alert-complex(),
+        bootstrap-vue:countdown-btn()}
 
         <hr/>
 
-        {bootstrap:row(bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"))}
-        {bootstrap:row(bootstrap-vue:button-group())}
+        {bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"),
+        bootstrap-vue:button-group()}
 
         <hr/>
 
-        {bootstrap:row(bootstrap:h4("Dropdowns", "bootstrap-vue:dropdown()"))}
-        {bootstrap:row(bootstrap-vue:dropdown())}
+        {bootstrap:h4("Dropdowns", "bootstrap-vue:dropdown()"),
+        bootstrap-vue:dropdown()}
 
         <hr/>
 
-        {bootstrap:row(bootstrap:h4("Form Input", "bootstrap-vue:form-input()"))}
-        {bootstrap:row(element p {"todo - not rendering"})}
+        {bootstrap:h4("Form Input", "bootstrap-vue:form-input()"),
+        bootstrap-vue:form(bootstrap-vue:form-input()),
+        element p {"todo - not rendering"}}
 
         <hr />
 
@@ -101,4 +102,4 @@ view:bootstrap(
         {bootstrap-vue:aside()}
         {bootstrap-vue:alert2()}
 
-    </div>)
+    </b-container>)

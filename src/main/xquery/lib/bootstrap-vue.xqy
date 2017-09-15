@@ -5,6 +5,11 @@ module namespace bootstrap-vue = "http://www.xmlmachines.com/ml-bootstrap-vue/bo
 declare namespace v-on = "http://fake.org/fake";
 declare namespace v-bind = "http://fake.org/fake2";
 
+declare function bootstrap-vue:row($content) as element(b-row) {
+    (:element div {attribute class {"row"}, $content} :)
+    <b-row>{$content}</b-row>
+};
+
 declare function bootstrap-vue:alert() as element(b-alert) {
     <b-alert v-bind:show="true" state="success" dismissible="dismissable">This is an alert</b-alert>
 };
@@ -57,12 +62,17 @@ declare function bootstrap-vue:dropdown() as element(b-dropdown) {
     </b-dropdown>
 };
 
+declare function bootstrap-vue:form($content as item()*) as element(b-form) {
+    (:@submit="onSubmit":)
+    <b-form>{$content}</b-form>
+};
+
 declare function bootstrap-vue:form-input() as element(b-form-input) {
     <b-form-input v-model="text"
         type="text"
         placeholder="Enter your name"
         v-bind:state="text.length?'success':'warning'"
-        v-bind:formatter="format">
+        v-bind:formatter="format">test
     </b-form-input>
 };
 
@@ -177,11 +187,6 @@ declare function bootstrap-vue:badge($variant as xs:string, $message as xs:strin
 declare function bootstrap-vue:card() as element(b-card) {
     <b-card>test</b-card>
 };
-
-
-
-
-
 
 (: below examples are from vuestrap - not working today; might be because they're designed to work with bootstrap 3 and I'm using 4 for this project... :)
 declare function bootstrap-vue:aside() {
