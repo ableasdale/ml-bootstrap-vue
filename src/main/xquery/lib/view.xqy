@@ -63,6 +63,15 @@ declare function view:bootstrap($title as xs:string, $content as item(), $additi
                             { text: 'Or toggle this other custom radio', value: 'second' },
                             { text: 'This one is Disabled', value: 'third', disabled: true }
                         ],
+
+                        formSelectSelected: null,
+                        formSelectOptions: [
+                            { value: null, text: 'Please select some item' },
+                            { value: 'a', text: 'This is First option' },
+                            { value: 'b', text: 'Default Selected Option' },
+                            { value: 'c', text: 'This is another option' },
+                            { value: 'd', text: 'This one is disabled', disabled: true }
+                        ],
                         dismissSecs: 10,
                         dismissCountDown: 0,
                         showDismissibleAlert: false,

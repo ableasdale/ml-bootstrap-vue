@@ -11,16 +11,16 @@ declare function bootstrap-vue:row($content) as element(b-row) {
 };
 
 declare function bootstrap-vue:alert() as element(b-alert) {
-    <b-alert v-bind:show="true" state="success" dismissible="true">This is an alert</b-alert>
+    <b-alert v-bind:show="true" state="success" v-bind:dismissible="true">This is an alert</b-alert>
 };
 
 declare function bootstrap-vue:alert($variant as xs:string) as element(b-alert) {
-    <b-alert v-bind:show="true" state="success" variant="{$variant}" dismissible="true">This is an alert</b-alert>
+    <b-alert v-bind:show="true" state="success" variant="{$variant}" v-bind:dismissible="true">This is an alert</b-alert>
 };
 
 declare function bootstrap-vue:alert-complex() as element(b-alert) {
     <b-alert v-bind:show="dismissCountDown"
-             dismissible="true"
+             v-bind:dismissible="true"
              variant="warning"
              v-on:dismissed="dismissCountdown=0"
              v-on:dismiss-count-down="countDownChanged">
@@ -104,8 +104,8 @@ declare function bootstrap-vue:form-checkbox() as element(b-form-checkbox) {
 };
 
 declare function bootstrap-vue:form-select() as element(b-form-select) {
-    <b-form-select v-model="selected"
-        v-bind:options="options"
+    <b-form-select v-model="formSelectSelected"
+        v-bind:options="formSelectOptions"
         v-bind:defaultOption="defaultOption"
         label="Example Label"
         description="We'll never share your gender with anyone else."
@@ -116,10 +116,10 @@ declare function bootstrap-vue:form-select() as element(b-form-select) {
 
 declare function bootstrap-vue:nav() as element(b-nav) {
     <b-nav pills="true">
-        <b-nav-item link="#" active="true">Active</b-nav-item>
+        <b-nav-item link="#" v-bind:active="true">Active</b-nav-item>
         <b-nav-item link="#">Link</b-nav-item>
         <b-nav-item link="#">Another Link</b-nav-item>
-        <b-nav-item link="#" disabled="true">Disabled</b-nav-item>
+        <b-nav-item link="#" v-bind:disabled="true">Disabled</b-nav-item>
     </b-nav>
 };
 
@@ -131,8 +131,8 @@ declare function bootstrap-vue:navbar() as element(b-navbar) {
         <span>Bootstrap4</span>
         </a>
 
-        <b-collapse isNav="isNav" id="nav_collapse">
-            <b-nav isNavBar="isNavBar">
+        <b-collapse v-bind:is-nav="true" id="nav_collapse">
+            <b-nav is-nav-bar="true">
                 <b-nav-item>Support</b-nav-item>
                 <b-nav-item>Docs</b-nav-item>
                 <b-nav-item>Contact Us</b-nav-item>
@@ -175,7 +175,7 @@ declare function bootstrap-vue:table() as element(b-table) {
         v-bind:items="items"
         v-bind:fields="fields"
         pagination="true"
-        v-bind:perPage="3">
+        v-bind:per-page="3">
         <template slot="name" scope="item">{text{"{{item.value.first}} {{item.value.last}}"}}</template>
         <template slot="actions" scope="item">
             <b-btn size="sm" v-on:click="details(item.item)">Details</b-btn>

@@ -10,8 +10,10 @@ declare option xdmp:output "method = html";
 view:bootstrap-vue(
     <b-container id="app">
         
-        {bootstrap:h2("UI Components", $config:APPLICATION-TITLE),
-        bootstrap:h4("Buttons", "bootstrap-vue:button()"),
+        {bootstrap:h2("UI Components", $config:APPLICATION-TITLE)}
+        <hr/>
+
+        {bootstrap:h4("Buttons", "bootstrap-vue:button()"),
         bootstrap-vue:button()}
         
         <hr/>
@@ -59,13 +61,13 @@ view:bootstrap-vue(
         
         <hr />
 
-        {bootstrap:row(bootstrap:h4("Form Checkbox", "bootstrap-vue:form-checkbox()"))}
-        {bootstrap:row(bootstrap-vue:form-checkbox())}
+        {bootstrap:h4("Form Checkbox", "bootstrap-vue:form-checkbox()"),
+        bootstrap-vue:form-checkbox(), bootstrap-vue:form-checkbox()}
         
         <hr />
 
-        {bootstrap:row(bootstrap:h4("Form Select", "bootstrap-vue:form-select()"))}
-        {bootstrap:row(bootstrap-vue:form-select())}
+        {bootstrap:h4("Form Select", "bootstrap-vue:form-select()"),
+        bootstrap-vue:form-select()}
         
         <hr />
 
