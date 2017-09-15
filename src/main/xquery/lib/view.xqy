@@ -57,10 +57,16 @@ declare function view:bootstrap($title as xs:string, $content as item(), $additi
                 new Vue({ 
                     el: '#app',
                     data: {
-                    dismissSecs: 10,
-                    dismissCountDown: 0,
-                    showDismissibleAlert: false,
-                    message: 'Hello Vue.js!'
+                        radioSelected: 'first',
+                        radioOptions: [
+                            { text: 'Toggle this custom radio', value: 'first' },
+                            { text: 'Or toggle this other custom radio', value: 'second' },
+                            { text: 'This one is Disabled', value: 'third', disabled: true }
+                        ],
+                        dismissSecs: 10,
+                        dismissCountDown: 0,
+                        showDismissibleAlert: false,
+                        message: 'Hello Vue.js!'
                     },
                     methods: {
                     countDownChanged(dismissCountDown) {

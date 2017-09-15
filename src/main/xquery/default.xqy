@@ -43,18 +43,19 @@ view:bootstrap-vue(
         <hr/>
 
         {bootstrap:h4("Form Input", "bootstrap-vue:form-input()"),
-        bootstrap-vue:form(bootstrap-vue:form-input()),
-        element p {"todo - not rendering"}}
+        bootstrap-vue:form(bootstrap-vue:form-input())
+        }
 
         <hr />
 
-        {bootstrap:row(bootstrap:h4("Form Fieldset", "bootstrap-vue:form-fieldset()"))}
-        {bootstrap:row(element p {"todo - not rendering"})}
+        {bootstrap:h4("Form Fieldset", "bootstrap-vue:form-fieldset()"),
+        bootstrap-vue:form-fieldset()
+        }
         
         <hr />
 
-        {bootstrap:row(bootstrap:h4("Form Radio buttons", "bootstrap-vue:forms-radio()"))}
-        {bootstrap:row(bootstrap-vue:form-radio())}
+        {bootstrap:h4("Form Radio buttons", "bootstrap-vue:forms-radio()"),
+        bootstrap-vue:form-radio()}
         
         <hr />
 
@@ -102,4 +103,4 @@ view:bootstrap-vue(
         {bootstrap-vue:aside()}
         {bootstrap-vue:alert2()}
 
-    </b-container>)
+</b-container>)

@@ -11,16 +11,16 @@ declare function bootstrap-vue:row($content) as element(b-row) {
 };
 
 declare function bootstrap-vue:alert() as element(b-alert) {
-    <b-alert v-bind:show="true" state="success" dismissible="dismissable">This is an alert</b-alert>
+    <b-alert v-bind:show="true" state="success" dismissible="true">This is an alert</b-alert>
 };
 
 declare function bootstrap-vue:alert($variant as xs:string) as element(b-alert) {
-    <b-alert v-bind:show="true" state="success" variant="{$variant}" dismissible="dismissable">This is an alert</b-alert>
+    <b-alert v-bind:show="true" state="success" variant="{$variant}" dismissible="true">This is an alert</b-alert>
 };
 
 declare function bootstrap-vue:alert-complex() as element(b-alert) {
     <b-alert v-bind:show="dismissCountDown"
-             dismissible="dismissable"
+             dismissible="true"
              variant="warning"
              v-on:dismissed="dismissCountdown=0"
              v-on:dismiss-count-down="countDownChanged">
@@ -48,9 +48,10 @@ declare function bootstrap-vue:button() as element(b-button) {
 
 declare function bootstrap-vue:button-group() as element(b-button-group) {
     <b-button-group>
-      <b-button>Left</b-button>
-      <b-button>Middle</b-button>
-      <b-button>Right</b-button>
+        <b-button>Left</b-button>
+        <b-button>Middle</b-button>
+        <b-button>Middle2</b-button>
+        <b-button>Right</b-button>
     </b-button-group>
 };
 
@@ -67,27 +68,34 @@ declare function bootstrap-vue:form($content as item()*) as element(b-form) {
     <b-form>{$content}</b-form>
 };
 
-declare function bootstrap-vue:form-input() as element(b-form-input) {
+declare function bootstrap-vue:form-input() as item()* {
     <b-form-input v-model="text"
         type="text"
         placeholder="Enter your name"
-        v-bind:state="text.length?'success':'warning'"
-        v-bind:formatter="format">test
-    </b-form-input>
+        v-bind:formatter="format"/>,
+    <b-form-text>We will convert your name to lowercase instantly</b-form-text>
 };
 
+(:
+
+    <b-form-input v-model="text1"
+                  type="text"
+                  placeholder="Enter your name"
+                  :formatter="format"></b-form-input>
+    <b-form-text>We will convert your name to lowercase instantly</b-form-text>
+:)
+
 declare function bootstrap-vue:form-fieldset() as element(b-form-fieldset) {
-    <b-form-fieldset
-        v-bind:feedback="text.length?'':'Please enter something'"
+    (: TODO - is this deprecated? :)
+    <b-form-fieldset        
         description="We'll convert your name to lowercase automatically."
-        label="Example Label"
-        v-bind:state="text.length?'success':'warning'">
-        <b-form-input v-model="text"></b-form-input>
+        label="Example Label">
+        <b-form-input v-model="text"/>
     </b-form-fieldset>
 };
 
 declare function bootstrap-vue:form-radio() as element(b-form-radio) {
-    <b-form-radio v-model="value" v-bind:items="items"/>
+    <b-form-radio v-model="radioSelected" v-bind:options="radioOptions"/>
 };
 (: <b-form-radio v-model="value" v-bind:items="items" stacked returnObject /> :)
 
