@@ -11,9 +11,10 @@ view:bootstrap-vue(
     <b-container id="app">
         
         {bootstrap:h2("UI Components", $config:APPLICATION-TITLE)}
-
+        <hr style="border-color: transparent;" class="my-3" />
         {bootstrap:h3("Alerts", "Usage Reference")}
         <hr/>
+
         {bootstrap:h4("Alerts", "bootstrap-vue:alert()"),
         bootstrap-vue:alert()}
 
@@ -27,8 +28,9 @@ view:bootstrap-vue(
         {bootstrap:h4("Alerts", 'bootstrap-vue:alert-complex()'),
         bootstrap-vue:alert-complex(),
         bootstrap-vue:countdown-btn()}
+        <hr />
 
-        <hr/>
+        <hr style="border-color: transparent;" class="my-5" />
 
         {bootstrap:h3("Buttons", "Usage Reference")}
         <hr/>
