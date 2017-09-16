@@ -11,13 +11,9 @@ view:bootstrap-vue(
     <b-container id="app">
         
         {bootstrap:h2("UI Components", $config:APPLICATION-TITLE)}
-        <hr/>
 
-        {bootstrap:h4("Buttons", "bootstrap-vue:button()"),
-        bootstrap-vue:button()}
-        
+        {bootstrap:h3("Alerts", "Usage Reference")}
         <hr/>
-
         {bootstrap:h4("Alerts", "bootstrap-vue:alert()"),
         bootstrap-vue:alert()}
 
@@ -32,6 +28,19 @@ view:bootstrap-vue(
         bootstrap-vue:alert-complex(),
         bootstrap-vue:countdown-btn()}
 
+        <hr/>
+
+        {bootstrap:h3("Buttons", "Usage Reference")}
+        <hr/>
+
+        {bootstrap:h4("Buttons", "bootstrap-vue:button()"),
+        bootstrap-vue:button()}
+        
+        <hr/>
+
+        {bootstrap:h4("Buttons", "bootstrap-vue:button(&quot;lg&quot;, &quot;success&quot;, &quot;my button&quot;)"),
+        bootstrap-vue:button("lg", "success", "my button")}
+        
         <hr/>
 
         {bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"),
@@ -71,38 +80,42 @@ view:bootstrap-vue(
         
         <hr />
 
-        {bootstrap:row(bootstrap:h4("Nav", "bootstrap-vue:nav()"))}
-        {bootstrap:row(bootstrap-vue:nav())}
+        {bootstrap:h4("Nav", "bootstrap-vue:nav()"),
+        bootstrap-vue:nav()}
        
         <hr />
-        {bootstrap:row(bootstrap:h4("Navbar", "bootstrap-vue:navbar()"))}
-        {bootstrap:row(bootstrap-vue:navbar())}
+        {bootstrap:h4("Navbar", "bootstrap-vue:navbar()"),
+        bootstrap-vue:navbar()}
 
         <hr/>
-        {bootstrap:row(bootstrap:h4("Pagination", "bootstrap-vue:pagination()"))}
-        {bootstrap:row(bootstrap-vue:pagination())}
+        {bootstrap:h4("Pagination", "bootstrap-vue:pagination()"),
+        bootstrap-vue:pagination()}
       
         <hr/>
-        {bootstrap:row(bootstrap:h4("Popover", "bootstrap-vue:popover()"))}
-        {bootstrap:row(bootstrap-vue:popover())}
-        {(bootstrap-vue:popover-btn(), bootstrap-vue:popover3())}
+        {bootstrap:h4("Popover", "bootstrap-vue:popover()"),
+        bootstrap-vue:popover(),
+        bootstrap-vue:popover-btn(), 
+        bootstrap-vue:popover3()}
 
         <hr/>
         {bootstrap:h4("Table", "bootstrap-vue:table()"),
         bootstrap-vue:table()}
 
         <hr/>
-        {bootstrap:row(bootstrap:h4("Badge", "bootstrap-vue:badge()"))}
-        {bootstrap:row(bootstrap-vue:badge())}
-        {bootstrap:row(bootstrap-vue:badge("success","this is a messsage"))}
+        {bootstrap:h4("Badge", "bootstrap-vue:badge()"),
+        element h5 {"This is a test ", bootstrap-vue:badge("primary", "NEW")},
+        element p {"This is another test ", bootstrap-vue:badge("warning", "BETA")},
+        bootstrap-vue:badge()," ",
+        bootstrap-vue:badge("success","this is a messsage")}
    
         <hr/>
-        {bootstrap:row(bootstrap:h4("Card", "bootstrap-vue:card()"))}
-        {bootstrap:row(bootstrap-vue:card())}
+        {bootstrap:h4("Card", "bootstrap-vue:card()"),
+        bootstrap-vue:card()}
 
 
-<hr/><hr/><hr/>
+        <hr/><hr/>
         {bootstrap-vue:aside()}
         {bootstrap-vue:alert2()}
 
-</b-container>)
+    </b-container>
+)

@@ -5,11 +5,7 @@ module namespace bootstrap-vue = "http://www.xmlmachines.com/ml-bootstrap-vue/bo
 declare namespace v-on = "http://fake.org/fake";
 declare namespace v-bind = "http://fake.org/fake2";
 
-declare function bootstrap-vue:row($content) as element(b-row) {
-    (:element div {attribute class {"row"}, $content} :)
-    <b-row>{$content}</b-row>
-};
-
+(: Alerts :)
 declare function bootstrap-vue:alert() as element(b-alert) {
     <b-alert v-bind:show="true" state="success" v-bind:dismissible="true">This is an alert</b-alert>
 };
@@ -32,18 +28,18 @@ declare function bootstrap-vue:alert-complex() as element(b-alert) {
     </b-alert>
 };
 
-declare function bootstrap-vue:countdown-btn() as element(b-btn) {
-    <b-btn v-on:click="showAlert" variant="info" class="m-1">Show alert with count-down timer</b-btn>
-};
-
-(: TODO - this is rejected right now...
-declare function bootstrap-vue:breadcrumb() as element(b-breadcrumb) {
-    <b-breadcrumb v-bind:items="[ {text: 'Manage', link: '#', active: true}, {text: 'Library', active: false} ]" />
-};
-:)
+(: Buttons :)
 
 declare function bootstrap-vue:button() as element(b-button) {
     <b-button v-bind:size="size" v-bind:variant="variant" v-on:click="clicked">Click Me!</b-button>
+};
+
+declare function bootstrap-vue:button($size as xs:string, $variant as xs:string, $text as xs:string) as element(b-button) {
+    element b-button {
+        attribute size{$size},
+        attribute variant{$variant},
+        $text
+    }
 };
 
 declare function bootstrap-vue:button-group() as element(b-button-group) {
@@ -54,6 +50,19 @@ declare function bootstrap-vue:button-group() as element(b-button-group) {
         <b-button>Right</b-button>
     </b-button-group>
 };
+
+
+
+
+declare function bootstrap-vue:countdown-btn() as element(b-btn) {
+    <b-btn v-on:click="showAlert" variant="info" class="m-1">Show alert with count-down timer</b-btn>
+};
+
+(: TODO - this is rejected right now...
+declare function bootstrap-vue:breadcrumb() as element(b-breadcrumb) {
+    <b-breadcrumb v-bind:items="[ {text: 'Manage', link: '#', active: true}, {text: 'Library', active: false} ]" />
+};
+:)
 
 declare function bootstrap-vue:dropdown() as element(b-dropdown) {
     <b-dropdown text="Split Dropdown Button" variant="success" split="split" v-on:click="click">
@@ -168,6 +177,11 @@ declare function bootstrap-vue:popover3(){
         affords you <em>greater <strong>control.</strong></em> and
         basic HTML support.
     </b-popover>
+};
+
+declare function bootstrap-vue:row($content) as element(b-row) {
+    (:element div {attribute class {"row"}, $content} :)
+    <b-row>{$content}</b-row>
 };
 
 declare function bootstrap-vue:table() as element(b-table) {
