@@ -34,16 +34,34 @@ view:bootstrap-vue(
 
         {bootstrap:h3("Buttons", "Usage Reference")}
         <hr/>
-
-        {bootstrap:h4("Buttons", "bootstrap-vue:button()"),
-        bootstrap-vue:button()}
         
-        <hr/>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:button("lg", "success", "Success button")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button("lg", "success", "Success button")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:button("lg", "danger", "Danger button")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button("lg", "danger", "Danger button")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:button()}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button()'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:button("sm", "info", "Info button")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button("sm", "info", "Info button")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:button("sm", "primary", "Primary button")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button("sm", "primary", "Primary button")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:button("sm", "outline-primary", "Primary button")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button("sm", "outline-primary", "Primary button")'}}</div>
+        </div>
 
-        {bootstrap:h4("Buttons", "bootstrap-vue:button(&quot;lg&quot;, &quot;success&quot;, &quot;my button&quot;)"),
-        bootstrap-vue:button("lg", "success", "my button")}
-        
         <hr/>
+        <hr style="border-color: transparent;" class="my-5" />
 
         {bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"),
         bootstrap-vue:button-group()}
