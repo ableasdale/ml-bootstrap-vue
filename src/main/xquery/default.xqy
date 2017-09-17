@@ -103,11 +103,20 @@ view:bootstrap-vue(
         (: Button Group :)
         bootstrap:h3("Button Group", "Usage Reference")}
         <hr/>
+        
+        <div class="row mb-3">
+            <div class="col-3">{bootstrap-vue:button-group( (bootstrap-vue:button("Left"),bootstrap-vue:button("Middle"),bootstrap-vue:button("Right")) )}</div>
+            <div class="col-9"><pre><code>bootstrap-vue:button-group((
+    bootstrap-vue:button("Left"),
+    bootstrap-vue:button("Middle"),
+    bootstrap-vue:button("Right") 
+))</code></pre></div>
+        </div>
+
+        <hr/>
         <hr style="border-color: transparent;" class="my-5" />
 
 
-        {bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"),
-        bootstrap-vue:button-group()}
 
         <hr/>
 

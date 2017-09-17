@@ -42,16 +42,11 @@ declare function bootstrap-vue:button($size as xs:string, $variant as xs:string,
     }
 };
 
-declare function bootstrap-vue:button-group() as element(b-button-group) {
-    <b-button-group>
-        <b-button>Left</b-button>
-        <b-button>Middle</b-button>
-        <b-button>Middle2</b-button>
-        <b-button>Right</b-button>
-    </b-button-group>
+(: Button Group :)
+
+declare function bootstrap-vue:button-group($buttons as element(b-button)*) as element(b-button-group) {
+    <b-button-group>{$buttons}</b-button-group>
 };
-
-
 
 
 declare function bootstrap-vue:countdown-btn() as element(b-btn) {
