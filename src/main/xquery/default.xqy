@@ -63,6 +63,32 @@ view:bootstrap-vue(
         <hr/>
         <hr style="border-color: transparent;" class="my-5" />
 
+        {bootstrap:h3("Badge", "Usage Reference")}
+        <hr/>
+
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("primary", "NEW")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("primary", "NEW")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("info", "i")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("info", "i")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("warning", "BETA")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("warning", "BETA")'}}</div>
+        </div>
+
+        <hr/>
+        {bootstrap:h4("Badge", "bootstrap-vue:badge()"),
+        element h5 {"This is a test ", bootstrap-vue:badge("primary", "NEW")},
+        element p {"This is another test ", bootstrap-vue:badge("warning", "BETA")},
+        bootstrap-vue:badge()," ",
+        bootstrap-vue:badge("success","this is a messsage")}
+
+
+
+
         {bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"),
         bootstrap-vue:button-group()}
 
@@ -120,13 +146,6 @@ view:bootstrap-vue(
         <hr/>
         {bootstrap:h4("Table", "bootstrap-vue:table()"),
         bootstrap-vue:table()}
-
-        <hr/>
-        {bootstrap:h4("Badge", "bootstrap-vue:badge()"),
-        element h5 {"This is a test ", bootstrap-vue:badge("primary", "NEW")},
-        element p {"This is another test ", bootstrap-vue:badge("warning", "BETA")},
-        bootstrap-vue:badge()," ",
-        bootstrap-vue:badge("success","this is a messsage")}
    
         <hr/>
         {bootstrap:h4("Card", "bootstrap-vue:card()"),
