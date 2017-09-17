@@ -30,8 +30,8 @@ declare function bootstrap-vue:alert-complex() as element(b-alert) {
 
 (: Buttons :)
 
-declare function bootstrap-vue:button() as element(b-button) {
-    <b-button v-bind:size="size" v-bind:variant="variant" v-on:click="clicked">Click Me!</b-button>
+declare function bootstrap-vue:button($message as xs:string) as element(b-button) {
+    <b-button v-on:click="clicked">{$message}</b-button>
 };
 
 declare function bootstrap-vue:button($size as xs:string, $variant as xs:string, $text as xs:string) as element(b-button) {

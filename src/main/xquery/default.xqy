@@ -12,7 +12,10 @@ view:bootstrap-vue(
         
         {bootstrap:h2("UI Components", $config:APPLICATION-TITLE)}
         <hr style="border-color: transparent;" class="my-3" />
-        {bootstrap:h3("Alerts", "Usage Reference")}
+        
+        {
+        (: Alerts :)
+        bootstrap:h3("Alerts", "Usage Reference")}
         <hr/>
 
         {bootstrap:h4("Alerts", "bootstrap-vue:alert()"),
@@ -29,10 +32,43 @@ view:bootstrap-vue(
         bootstrap-vue:alert-complex(),
         bootstrap-vue:countdown-btn()}
         <hr />
-
         <hr style="border-color: transparent;" class="my-5" />
 
-        {bootstrap:h3("Buttons", "Usage Reference")}
+        {
+        (: Badges :)
+        bootstrap:h3("Badges", "Usage Reference")}
+        <hr/>
+
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("primary", "NEW")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("primary", "NEW")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("info", "i")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("info", "i")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("warning", "BETA")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("warning", "BETA")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{bootstrap-vue:badge("success","this is a messsage")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:badge("success","this is a messsage")'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{element h5 {"Heading ", bootstrap-vue:badge("primary", "NEW")}}</div>
+            <div class="col-10">{element h5 {'element h5 {"Heading ", bootstrap-vue:badge("primary", "NEW")}'}}</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">{element p {"Paragraph ", bootstrap-vue:badge("warning", "BETA")}}</div>
+            <div class="col-10">{element h5 {'element p {"Paragraph ", bootstrap-vue:badge("warning", "BETA")}'}}</div>
+        </div>
+        <hr/>
+        <hr style="border-color: transparent;" class="my-5" />
+
+        {
+        (: Buttons :)
+        bootstrap:h3("Buttons", "Usage Reference")}
         <hr/>
         
         <div class="row mb-3">
@@ -44,8 +80,8 @@ view:bootstrap-vue(
             <div class="col-10">{element h5 {'bootstrap-vue:button("lg", "danger", "Danger button")'}}</div>
         </div>
         <div class="row mb-3">
-            <div class="col-2">{bootstrap-vue:button()}</div>
-            <div class="col-10">{element h5 {'bootstrap-vue:button()'}}</div>
+            <div class="col-2">{bootstrap-vue:button("Click me!")}</div>
+            <div class="col-10">{element h5 {'bootstrap-vue:button("Click me!")'}}</div>
         </div>
         <div class="row mb-3">
             <div class="col-2">{bootstrap-vue:button("sm", "info", "Info button")}</div>
@@ -63,30 +99,11 @@ view:bootstrap-vue(
         <hr/>
         <hr style="border-color: transparent;" class="my-5" />
 
-        {bootstrap:h3("Badge", "Usage Reference")}
+        {
+        (: Button Group :)
+        bootstrap:h3("Button Group", "Usage Reference")}
         <hr/>
-
-        <div class="row mb-3">
-            <div class="col-2">{bootstrap-vue:badge("primary", "NEW")}</div>
-            <div class="col-10">{element h5 {'bootstrap-vue:badge("primary", "NEW")'}}</div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-2">{bootstrap-vue:badge("info", "i")}</div>
-            <div class="col-10">{element h5 {'bootstrap-vue:badge("info", "i")'}}</div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-2">{bootstrap-vue:badge("warning", "BETA")}</div>
-            <div class="col-10">{element h5 {'bootstrap-vue:badge("warning", "BETA")'}}</div>
-        </div>
-
-        <hr/>
-        {bootstrap:h4("Badge", "bootstrap-vue:badge()"),
-        element h5 {"This is a test ", bootstrap-vue:badge("primary", "NEW")},
-        element p {"This is another test ", bootstrap-vue:badge("warning", "BETA")},
-        bootstrap-vue:badge()," ",
-        bootstrap-vue:badge("success","this is a messsage")}
-
-
+        <hr style="border-color: transparent;" class="my-5" />
 
 
         {bootstrap:h4("Button Groups", "bootstrap-vue:button-group()"),
