@@ -113,6 +113,15 @@ view:bootstrap-vue(
 ))</code></pre></div>
         </div>
 
+        <div class="row mb-3">
+            <div class="col-3">{bootstrap-vue:button-group( (bootstrap-vue:button("sm", "outline-primary", "One"),bootstrap-vue:button("sm", "outline-success", "Two"),bootstrap-vue:button("sm", "outline-danger", "Three")) )}</div>
+            <div class="col-9"><pre><code>bootstrap-vue:button-group((
+    bootstrap-vue:button("sm", "outline-primary", "One"),
+    bootstrap-vue:button("sm", "outline-success", "Two"),
+    bootstrap-vue:button("sm", "outline-danger", "Three")
+))</code></pre></div>
+        </div>
+
         <hr/>
         <hr style="border-color: transparent;" class="my-5" />
 
